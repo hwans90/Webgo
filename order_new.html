@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>주문추가</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style01.css">
+</head>
+<body>
+  <h1>주문추가</h1>
+  <form action="order_insert.php" method="post">
+    <table id="neworder" >
+    <!--  <tr>
+        <td>주문일 :</td>
+        <td><input type='date' id='currentDate'/><br>
+      </tr>      -->
+      <tr>
+        <th>종류</th>
+        <th>내용</th>
+      </tr>
+      <tr>
+        <td>종류 :</td>
+        <td><select name="tex" style="width:100px;">
+        <option value="무">무
+        <option value="세금계산서">세금계산서
+        <option value="현금영수증">현금영수증
+        <option value="사업자지출증빙">사업자지출증빙
+        </select>
+      </tr>
+      <tr>
+        <td>사업자 :</td>
+        <td><select name="lic" style="width:100px;">
+        <option value="무">무
+        <option value="기존">기존
+        <option value="팩스">팩스
+        <option value="회사폰">회사폰
+        <option value="이미지">이미지
+        </select>
+      </tr>
+      <tr>
+        <td>회사명 :</td>
+        <td> <input type="text" name="com_name" maxlength="30" size="30"></td>
+      </tr>
+      <tr>
+        <td>명세서 :</td>
+        <td><select name="tran" style="width:100px;">
+        <option value="무">무
+        <option value="메일">메일
+        <option value="팩스">팩스
+        <option value="출력">출력
+        </select>
+      </tr>
+      <tr>
+        <td>입금명 :</td>
+        <td> <input type="text" name="oname" maxlength="30" size="30"></td>
+      </tr>
+      <tr>
+        <td>입금액 :</td>
+        <td><input type="int" name="pay" maxlength="10" size="30"></td>
+      </tr>
+      <tr>
+        <td>연락처 :</td>
+        <td><input type="text" name="cnum" maxlength="30" size="30"></td>
+      </tr>
+      <tr>
+        <td>배송 :</td>
+        <td><input type="text" name="oadd" maxlength="80" size="50"></td>
+      </tr>
+      <tr>
+        <td><br/>품목 :</td>
+        <td><br/><input name="olist" type="text" size="40">
+      </td>
+
+    </table>
+    <table id="oder_list" >
+      <tr>
+        <td>품번 :</td>
+        <td><input type="int" name="isbn" maxlength="10" size="30"></td>
+        <td>품목 :</td>
+        <td><input type="text" name="olist" maxlength="10" size="30"></td>
+        <td>sss</td>
+        <td>수량 :</td>
+        <td><input type="number" name="quantity" maxlength="10" size="30"></td>
+        <td>금액 :</td>
+        <td><input type="int" name="price" maxlength="10" size="30"></td>
+        <td>10%</td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><input type="submit" value="추가" size="40"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
