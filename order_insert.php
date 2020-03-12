@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>주문추가 확인</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style01.css">
 </head>
 
 <body>
-<h1>주문내역</h1>
+  <h1>주문내역</h1>
 <?php
   $date = date('ymd');
   $tex = $_POST['tex'];
@@ -52,6 +54,22 @@
   $result = $db->query($query);
   $result1 = $db->query($query1);
 
+/*  echo "<table border=\"1\">\n";
+  echo "<tr><th width=6% bgcolor=\"#CCCCFF\">내용</th>
+            <th width=7% bgcolor=\"#CCCCFF\">내용</th></tr>
+        <tr><td>날짜 :</td><td>".$date."</td></tr>
+            <td>종류 :</td><td>".$tex."</td></tr>
+            <td>사업자 :</td><td>".$lic."</td></tr>
+            <td>회사명 :</td><td>".$com_name."</td></tr>
+            <td>명세서 :</td><td>".$tran."</td></tr>
+            <td>입금명 :</td><td>".$oname."</td></tr>
+            <td>입금액 :</td><td>".$pay."</td></tr>
+            <td>연락처 :</td><td>".$cnum."</td></tr>
+            <td>배송 :</td><td>".$oadd."</td></tr>
+            <td>품목</r>(VAT포함)</td><td></td></tr></tr><td>".$olist."</td></tr></table>";
+
+*/
+
   echo "날짜: ".$date."</p>";
   echo "종류: ".$tex."</p>";
   echo "사업자: ".$lic."</p>";
@@ -61,6 +79,7 @@
   echo "입금액: ".$pay."</p>";
   echo "연락처: ".$cnum."</p>";
   echo "배송: ".$oadd."</p>";
+  echo "품목(VAT포함): ".$olist."</p>";
 
   if ($result) {
       echo  $db->affected_rows."건 주문등록완료";

@@ -39,12 +39,12 @@ body {
   table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 95%;  }
+  width: 99%;  }
 
   td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   text-align: left;
-  padding: 8px;  }
+  padding: 10px;  }
 
   tr:nth-child(even) {
   background-color: #dddddd;  }
